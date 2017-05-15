@@ -8,6 +8,24 @@ const SlideWrapper = styled.div`
   width: 750px;
 `;
 
+const Button = styled.button`
+  align-items: center;
+  background: palevioletred;
+  border: 0;
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: papayawhip;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  margin: 0 0 0 5px;
+  min-height: 32px;
+  padding: 0 8px;
+`;
+
 const Footer = styled.div`
   bottom: 0;
   margin: 20px;
@@ -39,8 +57,8 @@ class Slide extends Component {
         <Title>{this.props.title}</Title>
         {this.props.children}
         <Footer>
-          {this.props.prev && <button onClick={this.handlePrev}>Prev</button>}
-          {this.props.next && <button onClick={this.handleNext}>Next</button>}
+          {this.props.prev && <Button onClick={this.handlePrev}>&lt;</Button>}
+          {this.props.next && <Button onClick={this.handleNext}>&gt;</Button>}
         </Footer>
       </SlideWrapper>
     );
