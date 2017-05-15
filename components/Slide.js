@@ -24,6 +24,11 @@ const Button = styled.button`
   margin: 0 0 0 5px;
   min-height: 32px;
   padding: 0 8px;
+
+  &:disabled {
+    background: lightgrey;
+    cursor: not-allowed;
+  }
 `;
 
 const Footer = styled.div`
@@ -57,8 +62,12 @@ class Slide extends Component {
         <Title>{this.props.title}</Title>
         {this.props.children}
         <Footer>
-          {this.props.prev && <Button onClick={this.handlePrev}>&lt;</Button>}
-          {this.props.next && <Button onClick={this.handleNext}>&gt;</Button>}
+          <Button onClick={this.handlePrev} disabled={!this.props.prev}>
+            &lt;
+          </Button>
+          <Button onClick={this.handleNext} disabled={!this.props.next}>
+            &gt;
+          </Button>
         </Footer>
       </SlideWrapper>
     );
