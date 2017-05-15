@@ -10,7 +10,7 @@ const Title = styled.h1`
 `
 
 export default () => (
-  <Layout title="PWG @ ReactEurope" next="/predictions">
+  <Layout title="PWG @ ReactEurope" next="/predictions/1">
     <Title>PWG @ ReactEurope</Title>
   </Layout>
 )
