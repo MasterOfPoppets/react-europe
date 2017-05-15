@@ -12,17 +12,12 @@ export default class MyDocument extends Document {
           <title>My page</title>
           {styleTags}
         </Head>
-        <body>
+        <body style={{ background: 'papayawhip' }}>
           <div className="root">
             {main}
           </div>
           <NextScript />
         </body>
-        <style global jsx>{`
-          body {
-            background: papayawhip;
-          }
-        `}</style>
       </html>
     )
   }
