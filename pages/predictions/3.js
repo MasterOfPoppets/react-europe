@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
 
-import Layout from '../../components/Layout'
-import PredictionList from '../../components/PredictionList'
+import Slide from "../../components/Slide";
+import PredictionList from "../../components/PredictionList";
 
 const Predictions = () => (
-  <Layout title="Predictions" prev="/predictions/2">
-    <PredictionList x={3} />
-  </Layout>
-)
+  <Slide title="Predictions" prev="/predictions/2">
+    <PredictionList step={3} />
+  </Slide>
+);
 
-export default Predictions
+export default Predictions;

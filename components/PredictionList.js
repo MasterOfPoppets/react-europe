@@ -1,10 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-const Wrapper = styled.div`
-  text-align: center;
-`;
-
 const H1 = styled.h1`
   color: palevioletred;
 `;
@@ -17,15 +13,12 @@ const ListItem = styled.li`
   font-size: 24px;
 `;
 
-const PredictionList = ({ x }) => (
-  <Wrapper>
-    <H1>Pre-conference Predictions</H1>
-    <List>
-      <ListItem>Strongly-typed languages compiling to JS</ListItem>
-      {x > 1 && <ListItem>Tooling</ListItem>}
-      {x > 2 && <ListItem>UI Performance  - Fiber, WebAssembly</ListItem>}
-    </List>
-  </Wrapper>
+const PredictionList = ({ step }) => (
+  <List>
+    <ListItem>Strongly-typed languages compiling to JS</ListItem>
+    {step > 1 && <ListItem>Tooling</ListItem>}
+    {step > 2 && <ListItem>UI Performance  - Fiber, WebAssembly</ListItem>}
+  </List>
 );
 
 export default PredictionList;
