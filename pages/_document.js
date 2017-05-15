@@ -1,5 +1,12 @@
 import Document, { Head, Main, NextScript } from 'next/document'
-import styled, { ServerStyleSheet } from 'styled-components'
+import styled, { injectGlobal, ServerStyleSheet } from 'styled-components'
+
+injectGlobal`
+  body {
+    background: papayawhip;
+    margin: 0;
+  }
+`
 
 export default class MyDocument extends Document {
   render() {
@@ -12,7 +19,7 @@ export default class MyDocument extends Document {
           <title>My page</title>
           {styleTags}
         </Head>
-        <body style={{ background: 'papayawhip' }}>
+        <body>
           <div className="root">
             {main}
           </div>
